@@ -24,11 +24,102 @@
     <main>
         <div class="pagina1"></div>
         <div class="pagina2"></div>
-        <div class="pagina3"></div>
-
+        <div class="pagina3">
+            <div class="e-formulario">
+                <div class="e-titulo1">Comece pelo começo</div>
+                <input class="e-inputTitulo" type="text" placeholder="Título do seu quizz" />
+                <input class="e-inputUrl" type="text" placeholder="URL da imagem do seu quizz" />
+                <input class="e-inputQuantidaPergunta" type="text" placeholder="Quantidade de perguntas do quizz" />
+                <input class="e-inputQuantidadeNiveis" type="text" placeholder="Quantidade de níveis do quizz" />
+                <button class="e-finalizarFormulário" onclick="finalizadorFormulario()">Prosseguir pra criar
+                    perguntas</button>
+            </div>
+            <div class="e-criarPerguntas hidden">
+                <div class="e-titulo1">Crie suas perguntas</div>
+                <div class="e-pergunta1">
+                    <h1 class="e-titulo2">Pergunta 1</h1>
+                    <input class="e-inputTextoPergunta" type="text" placeholder="Texto da pergunta" />
+                    <input class="e-inputCorPergunta" type="text" placeholder="Cor de fundo da pergunta" />
+                    <h2 class="e-titulo2">Resposta Correta</h2>
+                    <input class="e-inputResposta" type="text" placeholder="Resposta correta" />
+                    <input class="e-inputUrlImagemResposta" type="text" placeholder="URL da imagem" />
+                    <h2 class="e-titulo2">Respostas Incorretas</h2>
+                    <input class="e-inputIncorreta1" type="text" placeholder="Resposta incorreta 1" />
+                    <input class="e-inputUrlImagemIncorreta1" type="text" placeholder="URL da imagem 1" />
+                    <input class="e-inputIncorreta2" type="text" placeholder="Resposta incorreta 2" />
+                    <input class="e-inputUrlImagemIncorreta2" type="text" placeholder="URL da imagem 2" />
+                    <input class="e-inputIncorreta3" type="text" placeholder="Resposta incorreta 3" />
+                    <input class="e-inputUrlImagemIncorreta3" type="text" placeholder="URL da imagem 3" />
+    
+                </div>
+                <div class="e-pergunta2">
+                    <h1 class="e-titulo2">Pergunta 2</h1>
+                    <input class="e-inputTextoPergunta" type="text" placeholder="Texto da pergunta" />
+                    <input class="e-inputCorPergunta" type="text" placeholder="Cor de fundo da pergunta" />
+                    <h2 class="e-titulo2">Resposta Correta</h2>
+                    <input class="e-inputResposta" type="text" placeholder="Resposta correta" />
+                    <input class="e-inputUrlImagemResposta" type="text" placeholder="URL da imagem" />
+                    <h2 class="e-titulo2">Respostas Incorretas</h2>
+                    <input class="e-inputIncorreta1" type="text" placeholder="Resposta incorreta 1" />
+                    <input class="e-inputUrlImagemIncorreta1" type="text" placeholder="URL da imagem 1" />
+                    <input class="e-inputIncorreta2" type="text" placeholder="Resposta incorreta 2" />
+                    <input class="e-inputUrlImagemIncorreta2" type="text" placeholder="URL da imagem 2" />
+                    <input class="e-inputIncorreta3" type="text" placeholder="Resposta incorreta 3" />
+                    <input class="e-inputUrlImagemIncorreta3" type="text" placeholder="URL da imagem 3" />
+    
+                </div>
+                <div class="e-pergunta3">
+                    <h1 class="e-titulo2">Pergunta 3</h1>
+                    <input class="e-inputTextoPergunta" type="text" placeholder="Texto da pergunta" />
+                    <input class="e-inputCorPergunta" type="text" placeholder="Cor de fundo da pergunta" />
+                    <h2 class="e-titulo2">Resposta Correta</h2>
+                    <input class="e-inputResposta" type="text" placeholder="Resposta correta" />
+                    <input class="e-inputUrlImagemResposta" type="text" placeholder="URL da imagem" />
+                    <h2 class="e-titulo2">Respostas Incorretas</h2>
+                    <input class="e-inputIncorreta1" type="text" placeholder="Resposta incorreta 1" />
+                    <input class="e-inputUrlImagemIncorreta1" type="text" placeholder="URL da imagem 1" />
+                    <input class="e-inputIncorreta2" type="text" placeholder="Resposta incorreta 2" />
+                    <input class="e-inputUrlImagemIncorreta2" type="text" placeholder="URL da imagem 2" />
+                    <input class="e-inputIncorreta3" type="text" placeholder="Resposta incorreta 3" />
+                    <input class="e-inputUrlImagemIncorreta3" type="text" placeholder="URL da imagem 3" />
+    
+                </div>
+                <button class="e-finalizarFormulário" onclick="finalizadorPerguntas()">Prosseguir pra criar níveis</button>
+            </div>
+            <div class="e-criarNiveis hidden">
+                <div class="e-titulo1">Agora, decida os niveis</div>
+                <div class="e-nivel1">
+                    <h1 class="e-titulo2">Nivel 1</h1>
+                    <input class="e-inputTituloNv" type="text" placeholder="Título do nível" />
+                    <input class="e-inputprctNv" type="text" placeholder="% de acerto mínima" />
+                    <input class="e-inputTUrlImgNv" type="text" placeholder="URL da imagem do nível" />
+                    <input class="e-inputDescriçãoNv" type="text" placeholder="Descrição do nível" />
+    
+                </div>
+                <div class="e-nivel2">
+                    <h1 class="e-titulo2">Nivel 2</h1>
+                    <input class="e-inputTituloNv" type="text" placeholder="Título do nível" />
+                    <input class="e-inputprctNv" type="text" placeholder="% de acerto mínima" />
+                    <input class="e-inputTUrlImgNv" type="text" placeholder="URL da imagem do nível" />
+                    <input class="e-inputDescriçãoNv" type="text" placeholder="Descrição do nível" />
+    
+                </div>
+                <div class="e-nivel3">
+                    <h1 class="e-titulo2">Nivel 2</h1>
+                    <input class="e-inputTituloNv" type="text" placeholder="Título do nível" />
+                    <input class="e-inputprctNv" type="text" placeholder="% de acerto mínima" />
+                    <input class="e-inputTUrlImgNv" type="text" placeholder="URL da imagem do nível" />
+                    <input class="e-inputDescriçãoNv" type="text" placeholder="Descrição do nível" />
+    
+                </div>
+                <button class="e-finalizarFormulário" onclick="finalizadorQuizz()">Finalizar Quizz</button>
+           
+            </div>
+        </div>
+    
     </main>
     <footer>
-
+    
     </footer>
 
 
@@ -38,6 +129,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts.js"></script>
+    <script src="scripts3.js"></script>
 </body>
 
 </html>
