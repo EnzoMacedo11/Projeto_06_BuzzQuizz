@@ -21,14 +21,15 @@ function buscarQuizzes(){
 
 buscarQuizzes();
 
-function renderizarQuizzes(todosQuizzes){
-    const ulQuizzOutros = document.QuerySelector('.p-listaQuizzOutros');
+function renderizarQuizzes(response){
+    const ulQuizzOutros = document.QuerySelector('p-listaQuizzOutros');
     ulQuizzOutros.innerHTML = '';
-    for(j = 0; j , todosQuizzes.data.lenght; j++ ){
-    ulQuizzOutros.innerHTML += `<li class="p-Quizz" onclick="selecionarQuizz(this)"> 
-        <span class="tituloQuizz">${todosQuizzes.data.tittle[j]}</span>
-        <img src="${todosQuizzes.data.image[j]}>" </li>`
+    for(j = 0; j < response.data.lenght; j++ ){
+    ulQuizzOutros.innerHTML += `<li class="p-Quizz" onclick="selecionarQuizz()"> 
+        <span class="tituloQuizz">${response.data.tittle[j]}</span>
+        <img src="${response.data.image[j]}>" </li>`
     }
+
 
 }
 
@@ -40,7 +41,7 @@ function selecionarQuizz(){
 function criarQuizz(){
     let pagina1 = document.querySelector('.pagina1')
     let pagina3 = document.querySelector('.pagina3')
-    pagina1.classList.add('.p-hidden')
+    pagina1.classList.add('p-hidden')
     pagina3.classList.remove('p-hidden')
 }
 

@@ -28,7 +28,7 @@
                 
                 <div class="p-topoMeuQuizz">
                     <span>Seus Quizzes</span>
-                    <button class="p-buttonIcon" onclick="criarQuizz(this)" >
+                    <button class="p-buttonIcon" onclick="criarQuizz()" >
                     <ion-icon name="add-circle"></ion-icon>
                     </button>
                 </div>   
@@ -39,18 +39,18 @@
             
             <div class="p-semQuizz"> 
                 <p class="p-textoSemQuizz">Você não criou nenhumn quizz ainda :(</p>
-                <button class="p-buttonCriarQuizz" onclick="criarQuizz(this)" >Criar Quizz</button>
+                <button class="p-buttonCriarQuizz" onclick="criarQuizz()" >Criar Quizz</button>
                 <ul class="p-listaMeuQuizz"></ul>
             </div>
 
             <div class="p-quizzOutros">
                 <span>Todos os Quizzes</span>
-                <div><ul class="p-listaQuizzOutros"></ul></div>
+                <ul class="p-listaQuizzOutros"></ul>
             </div>
 
         </div>
         <div class="pagina2"></div>
-        <div class="pagina3">
+        <div class="pagina3 p-hidden">
             <div class="e-formulario">
                 <div class="e-titulo1">Comece pelo começo</div>
                 <input class="e-inputTitulo" type="text" placeholder="Título do seu quizz" />
