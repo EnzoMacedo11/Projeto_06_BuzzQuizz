@@ -21,17 +21,18 @@ function buscarQuizzes(){
 
 buscarQuizzes();
 
-function renderizarQuizzes(response){
+function renderizarQuizzes(quizz){
     const ulQuizzOutros = document.QuerySelector('p-listaQuizzOutros');
     ulQuizzOutros.innerHTML = '';
-    for(j = 0; j < response.data.lenght; j++ ){
-    ulQuizzOutros.innerHTML += `<li class="p-Quizz" onclick="selecionarQuizz()"> 
-        <span class="tituloQuizz">${response.data.tittle[j]}</span>
-        <img src="${response.data.image[j]}>" </li>`
+    for(j = 0; j < quizz.lenght; j++ ){
+    ulQuizzOutros.innerHTML += `<li class="p-Quizz" onclick="selecionarQuizz(${quizz.id[j]})"> 
+        <span class="tituloQuizz">${quizz.tittle[j]}</span>
+        <img src="${quizz.image[j]}>" </li>`
     }
 
 
 }
+renderizarQuizzes();
 
 function selecionarQuizz(){
    let quizz = document.querySelector('.p-Quizz')
