@@ -83,7 +83,7 @@
 
 
 }
-.e-inputQuantidaPergunta {
+.e-inputQuantidadePergunta {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -177,25 +177,7 @@
     width: 300px;
     height: 300px;
 }
-.e-pergunta1 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-
-    color: #000000;
-}
-.e-pergunta2 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-
-    color: #000000;
-}
-.e-pergunta3 {
+.e-pergunta {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -422,25 +404,7 @@
 .e-criarNiveis.hidden{
     display: none;
 }
-.e-nivel1 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-
-    color: #000000;
-}
-.e-nivel2 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-
-    color: #000000;
-}
-.e-nivel3 {
+.e-nivel {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
