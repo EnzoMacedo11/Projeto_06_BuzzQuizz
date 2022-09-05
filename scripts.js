@@ -20,13 +20,13 @@ function renderizarQuizz(resposta) {
     todosQuizzes = resposta.data;
     console.table(todosQuizzes);
     for (i = 0; i < todosQuizzes.lenght; i++) {
-        // if (id = id_usuario) {
-        //     let ulQuizzesDom = document.querySelector(".p-listaMeuQuizz");
-        //     ulMeuQuizz.innerHTML += `<li onclick="selecionarQuizz"class="p-Quizz"> 
-        //     <div class="divQuizz">
-        //     <span class="tituloQuizz">${todosQuizzes.title[i]}</span>
-        //     <img src="${todosQuizzes.image[i]}" class="imagemQuizz"></div></li>`;
-        // } else {
+        if (id = id_usuario) {
+            let ulQuizzesDom = document.querySelector(".p-listaMeuQuizz");
+            ulMeuQuizz.innerHTML += `<li onclick="selecionarQuizz"class="p-Quizz"> 
+            <div class="divQuizz">
+            <span class="tituloQuizz">${todosQuizzes.title[i]}</span>
+            <img src="${todosQuizzes.image[i]}" class="imagemQuizz"></div></li>`;
+        } else {
             ulQuizzesDom.innerHTML += `<li onclick="selecionarQuizz"class="p-Quizz">
             <div class="divQuizz"> 
             <span class="tituloQuizz">${todosQuizzes.title[i]}</span>
@@ -34,7 +34,7 @@ function renderizarQuizz(resposta) {
         }
 
     }
-// }
+}
 
 function obterUnicoQuizz(){
 let requisição = axios.get('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/data.id');
