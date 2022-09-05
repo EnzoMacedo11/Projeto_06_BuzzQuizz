@@ -1,4 +1,4 @@
-alert('Ta funcionando')
+
 
 let todosQuizzes = [];
 let ulQuizzes =[];
@@ -8,34 +8,32 @@ function buscarQuizzes(){
     let todosQuizzes = axios.get("https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes");
     todosQuizzes.then(renderizarQuizz);
     todosQuizzes.catch(tratarErro);
-    alert('Tá indo');
+    
       
 }
 buscarQuizzes()
 
 function renderizarQuizz(resposta) {
-    alert('Tamo indo');
     console.log(resposta);
     let ulQuizzesDom = document.querySelector('.p-listaQuizzOutros');
-    todosQuizzes = resposta.data;
+    let ulMeuQuizzDom = document.querySelector(".p-listaMeuQuizz");
+    const todosQuizzes = resposta.data;
     console.table(todosQuizzes);
-    for (i = 0; i < todosQuizzes.lenght; i++) {
-        if (id = id_usuario) {
-            let ulQuizzesDom = document.querySelector(".p-listaMeuQuizz");
-            ulMeuQuizz.innerHTML += `<li onclick="selecionarQuizz"class="p-Quizz"> 
-            <div class="divQuizz">
-            <span class="tituloQuizz">${todosQuizzes.title[i]}</span>
-            <img src="${todosQuizzes.image[i]}" class="imagemQuizz"></div></li>`;
-        } else {
-            ulQuizzesDom.innerHTML += `<li onclick="selecionarQuizz"class="p-Quizz">
-            <div class="divQuizz"> 
-            <span class="tituloQuizz">${todosQuizzes.title[i]}</span>
-            <img src="${todosQuizzes.image[i]}" class="imagemQuizz"></div></li>`;
-        }
+    for (i = 0; i < todosQuizzes.length; i++) {
+            ulQuizzesDom.innerHTML += `<li onclick="selecionarQuizz()" class="p-Quizz">
+            <div class="p-divQuizz">
+            <div class="p-gradiente"> 
+            <span class="tituloQuizz">${todosQuizzes[i].title}</span>
+            <img src="${todosQuizzes[i].image}" class="imagemQuizz"></div></div></li>`;
+        }  if (todosQuizzes.id = localStorage.get()) {
+                ulMeuQuizzDom.innerHTML += `<li onclick="selecionarQuizz"class="p-Quizz"> 
+                <div class="p-divQuizz">
+                <span class="tituloQuizz">${todosQuizzes.title[i]}</span>
+                <img src="${todosQuizzes.image[i]}" class="imagemQuizz"></div></li>`;
+            } else {}
 
     }
-}
-
+     
 function obterUnicoQuizz(){
 let requisição = axios.get('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes/data.id');
 requisição.then(renderizarQuizzSelecionado);
@@ -50,6 +48,7 @@ function renderizarQuizzSelecionado(){
 
 function selecionarQuizz(){
    let quizz = document.querySelector('.p-Quizz');
+   renderizarQuizzSelecionado()
    
 }
 
@@ -67,7 +66,7 @@ function tratarErro(erro){
 
 function checarMeuQuizz(){
     const ul = document.querySelector('.p-listaMeuQuizz')
-    for (i = 0; i < ul.lenght; i++){
+    for (i = 0; i < ul.length; i++){
         if(i >= 1){
           let divSemQuizz =  document.QuerySelector(".p-semQuizz");
           let divComSeuQUizz = document.QuerySelector("p-divComSeuQUizz ");
@@ -77,11 +76,6 @@ function checarMeuQuizz(){
     }
 }
 checarMeuQuizz();
-
-function criandoQuizz(){
-    const requisição = axios.post('https://mock-api.driven.com.br/api/v4/buzzquizz/quizzes');
-    requisição.then(voltarPagina1);
-}
 
 function voltarPagina1(){
     let pagina1 = document.querySelector('.pagina1');
