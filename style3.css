@@ -83,6 +83,7 @@
 
 
 }
+
 .e-inputQuantidadePergunta {
     display: flex;
     justify-content: center;
@@ -104,6 +105,7 @@
 
 
 }
+
 .e-inputQuantidadeNiveis {
     display: flex;
     justify-content: center;
@@ -126,7 +128,7 @@
 
 }
 
-.e-formulario > input ::placeholder{
+.e-formulario>input ::placeholder {
     color: #BABABA;
     font-style: italic;
     font-family: 'Roboto';
@@ -149,16 +151,20 @@
     color: #FFF5F4;
 }
 
-.hidden{
+
+.hidden {
     display: none;
 }
-.visible{
+
+.visible {
     display: flex;
 }
-.e-criarPerguntas.hidden{
+
+.e-criarPerguntas.hidden {
     display: none;
 }
-.e-criarPerguntas{
+
+.e-criarPerguntas {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -166,17 +172,20 @@
     align-items: center;
     margin-bottom: 85px;
 }
-.e-criarPerguntas > input ::placeholder{
+
+.e-criarPerguntas>input ::placeholder {
     color: #BABABA;
     font-style: italic;
     font-family: 'Roboto';
     font-weight: 400;
 }
-.teste1{
+
+.teste1 {
     background-color: aqua;
     width: 300px;
     height: 300px;
 }
+
 .e-pergunta {
     font-family: 'Roboto';
     font-style: normal;
@@ -187,12 +196,12 @@
     color: #000000;
 }
 
-.e-titulo2{
+.e-titulo2 {
     margin-top: 28px;
     margin-bottom: 12px;
 }
 
-.e-inputTextoPergunta{
+.e-inputTextoPergunta {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -213,7 +222,7 @@
 
 }
 
-.e-inputCorPergunta{
+.e-inputCorPergunta {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -233,7 +242,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputResposta{
+
+.e-inputResposta {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -253,7 +263,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputUrlImagemResposta{
+
+.e-inputUrlImagemResposta {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -273,7 +284,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputIncorreta1{
+
+.e-inputIncorreta1 {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -293,7 +305,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputIncorreta2{
+
+.e-inputIncorreta2 {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -313,7 +326,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputIncorreta3{
+
+.e-inputIncorreta3 {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -333,7 +347,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputUrlImagemIncorreta1{
+
+.e-inputUrlImagemIncorreta1 {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -353,7 +368,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputUrlImagemIncorreta2{
+
+.e-inputUrlImagemIncorreta2 {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -373,7 +389,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputUrlImagemIncorreta3{
+
+.e-inputUrlImagemIncorreta3 {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -393,7 +410,8 @@
     margin-bottom: 9px;
 
 }
-.e-criarNiveis{
+
+.e-criarNiveis {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -401,9 +419,11 @@
     align-items: center;
     margin-bottom: 85px;
 }
-.e-criarNiveis.hidden{
+
+.e-criarNiveis.hidden {
     display: none;
 }
+
 .e-nivel {
     font-family: 'Roboto';
     font-style: normal;
@@ -413,7 +433,8 @@
 
     color: #000000;
 }
-.e-inputTituloNv{
+
+.e-inputTituloNv {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -434,7 +455,7 @@
 
 }
 
-.e-inputprctNv{
+.e-inputprctNv {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -454,7 +475,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputTUrlImgNv{
+
+.e-inputTUrlImgNv {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -474,7 +496,8 @@
     margin-bottom: 9px;
 
 }
-.e-inputDescriçãoNv{
+
+.e-inputDescriçãoNv {
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -493,4 +516,73 @@
 
     margin-bottom: 9px;
 
+}
+
+.e-finalizador.hidden {
+    display: none;
+
+}
+
+.e-finalizador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.e-ImagemFinal {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    left: 100px;
+    width: 500px;
+    height: 266px;
+
+}
+
+.e-TituloImagemFinal {
+    position: absolute;
+    z-index: 3;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    top: 450px;
+    margin-left: 15px;
+
+    color: #FFFFFF;
+}
+
+.e-finalizarFormulário2 {
+    margin-top: 70px;
+    width: 369px;
+    height: 54px;
+    background: #EC362D;
+    border-radius: 15px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+
+    color: #FFF5F4;
+}
+
+.e-finalizarFormulário3 {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #818181;
 }
