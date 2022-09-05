@@ -25,8 +25,8 @@ function finalizadorFormulario(){
         alert("Devem ter pelo menos 2 niveis");
         criarQuizz()
     }
-    else if(qntLetrasTitulo < 20 ||qntLetrasTitulo > 45 ){
-        alert("Devem ter entre 25 a 45 letras");
+    else if(qntLetrasTitulo < 20){
+        alert("Devem ter entre 25 até 45 letras");
         criarQuizz()
     }
     else{
@@ -53,11 +53,12 @@ function finalizadorQuizz(){
     const butoonon = document.querySelector('.e-finalizador');
     buttonoff.classList.add("hidden");
     butoonon.classList.remove("hidden");
+    ePaginaFinalQuizz()
 
 }
 function retornarFormulario(){
     const buttonoff = document.querySelector('.e-finalizador');
-    //const butoonon = document.querySelector('.e-formulario');
+    //const butoonon = document.querySelector('.e-PaginaFinalQuizz');
     buttonoff.classList.add("hidden");
     //butoonon.classList.remove("hidden");
 }
@@ -69,9 +70,9 @@ function numeroDePerguntas() {
     let qntperguntas = nperguntas.value;
 
     let ul = document.querySelector(".e-mainPerguntas");
-
+    ul.innerHTML = "";
     for (let i = 0; i < qntperguntas; i++) {
-      ul.innerHTML += `<li>
+      ul.innerHTML += `<div>
     <div class="e-separadorperguntas${i + 1}">
     <div class="e-pergunta">
         <h1 class="e-titulo2">Pergunta ${i + 1}</h1>
@@ -89,7 +90,7 @@ function numeroDePerguntas() {
         <input class="e-inputUrlImagemIncorreta3" type="url" placeholder="URL da imagem 3" />
     </div>
     </div>
-          </li>`;
+          </div>`;
     }
     }
 
@@ -101,7 +102,7 @@ function numeroDeNiveis(){
     ul.innerHTML = "";
   
     for (let i = 0; i < qntniveis; i++) {
-      ul.innerHTML += `<li>
+      ul.innerHTML += `<div>
       <div class="e-separadorniveis${i + 1}">
       <div class="e-nivel">
       <h1 class="e-titulo2">Nivel ${i + 1}</h1>
@@ -111,7 +112,24 @@ function numeroDeNiveis(){
       <input class="e-inputDescriçãoNv" type="text" placeholder="Descrição do nível" />
       </div>
       </div>
-          </li>`;
+          </div>`;
     }
   }
 
+
+function ePaginaFinalQuizz(){
+    let imagem = document.querySelector(".e-inputUrl");
+    let tituloImagem =  document.querySelector(".e-inputTitulo");
+    let trueImagem = imagem.value;
+    let trueTituloImagem = tituloImagem.value;
+    const ul = document.querySelector(".e-mainImagemFinal");
+    let unico = 1 
+
+    for (let i = 0; i < unico; i++) {
+      ul.innerHTML += `<div class = "e-EspaçoImagemFinal">
+            <img class = "e-ImagemFinal" src = "${trueImagem}">
+            <div class = "e-TituloImagemFinal">${trueTituloImagem}</div>
+          </div>`;
+    
+    }
+}
